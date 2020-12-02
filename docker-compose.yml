@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  app:
+    build:
+      context: docker/golang
+    volumes:
+      - ./app:/app
+
+  node:
+    build:
+      context: docker/node
+    volumes:
+      - ./:/var/www/cached
